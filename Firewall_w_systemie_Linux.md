@@ -40,9 +40,9 @@ nmap <ip ofiary> -A -p 1-1024
 Porty które nie są nasłuchiwane przez żadną usługę mają status closed.
 Porty ze statusem filtrowanym są blokowane przez regułę firewall lub inny program sieciowy.
 
-### W tym momencie atakujący nie dostanie się na serwer WWW ofiary ponieważ początkowo zablokowaliśmy cały ruch wchodzący, a następnie dodaliśmy tylko poszczególne reguły polityki określającej akceptację ruchu.
+W tym momencie atakujący nie dostanie się na serwer WWW ofiary ponieważ początkowo zablokowaliśmy cały ruch wchodzący, a następnie dodaliśmy tylko poszczególne reguły polityki określającej akceptację ruchu.
 
-### Przed kolejnymi testami należy usunąć bieżące reguły, a następnie ustalić regułę akceptującą cały ruch INPUT.
+Przed kolejnymi testami należy usunąć bieżące reguły, a następnie ustalić regułę akceptującą cały ruch INPUT.
 
 ## Filtr pakietów bez pamięci
 Testy przeprowadzane będą na 3 maszynach wirtualnych (ofiara, atakujący oraz C jako firewall).
