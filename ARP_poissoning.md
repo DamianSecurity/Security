@@ -10,7 +10,7 @@ arp -d <ip>
 arp -a
 ```
 
-### Pingujemy ofiarę z atakującym, dzięki czemu maszyny uzyskują swoje adresy MAC. Za pomocą programu Wireshark można sprawdzić jak wygląda wymiana pakietów (ARP Request oraz ARP Reply).
+### Pingujemy maszynę A z maszyny B, dzięki czemu maszyny uzyskują swoje adresy MAC. Za pomocą programu Wireshark można sprawdzić jak wygląda wymiana pakietów (ARP Request oraz ARP Reply).
 
 ### Ponownie sprawdzamy tablicę ARP - na tablicy pojawią się adresy pingowanych maszyn.
 
@@ -18,7 +18,7 @@ arp -a
 
 ### Teraz uruchamiamy ettercap na maszynie C:
 ```
-ettercap -Tq -M arp /ip ofiary// /ip atakującego//
+ettercap -Tq -M arp /ip A// /ip B//
 ```
 
 ### Po uruchomieniu ataku, za pomocą Wiresharka możemy zauważyć podwojoną ilość wysyłanych pakietów podczas pingowania ponieważ część pakietów trafia do podsłuchu. Do tablic arp został dopisany adres maszyny C.
