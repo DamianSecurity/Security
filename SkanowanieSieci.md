@@ -51,3 +51,5 @@ nmap -sT -Pn -p 1-1024 -v <ip ofiary>
 ```
 Możemy użyć -Pn aby nmap uznawał wszystkie porty jako otwarte, pomoże to w namierzeniu nieaktywnych portów.
 Za pomocą -sV uzyskamy dokładne informacje na temat wersji usługi którą skanujemy.
+
+### Można zauważyć, że porty zostały wykryte, status i nazwa opisane.
