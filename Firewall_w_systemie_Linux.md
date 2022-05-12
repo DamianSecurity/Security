@@ -67,3 +67,20 @@ iptables -P FORWARD DROP
 iptables -A FORWARD -p tcp -s <ip ofiary> --dport 80 -j ACCEPT
 iptables -A FORWARD -p tcp -s <ip ofiary> --sport 80 -j ACCEPT
 ```
+
+### Aby sprawdzić czy wszystko działa poprawnie możemy spróbować puścić nmap na port 22 (port źródłowy to 80):
+```
+nmap -sS -Pn -n -p 22 <ip atakującego> --source-port 80
+Analogicznie robimy w drugą stronę
+```
+
+### Resetujemy reguły
+
+### Teraz ustawimy reguły tak, aby stosowanie SSH z maszyny atakującego na maszyne ofiary działało poprawnie, jednak na odwrót już nie:
+```
+iptables -A FORWARD -p tcp -d <ip ofiary> --dport 22 -j ACCEPY
+iptables -A FORWARD -p tcp -s <ip ofiary> --sport 22 --syn -j DROP
+iptables -A FORWARD -p tcp -s <ip ofiary> --sport 22 -j DROP
+```
+
+### Działanie reguł możemy sprawdzić za pomocą programu PuTTy.
