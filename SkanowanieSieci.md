@@ -1,6 +1,15 @@
 # Skanowanie sieci
+Testy przeprowadzane będą na 2 maszynach wirtualnych (ofiara i atakujący).
 
-To musisz zrobić tak:
+
+### Dla wygody możemy dodać sobie uprawnienia roota oraz odświeżamy listę pakietów w repozytorium:
 ```
-kod bla bla bla sgjfhg
+sudo su
+apt update
+```
+### Na maszynie ofiary instalujemy apache2, uruchamiamy i sprawdzamy status usługi.
+```
+apt-get install apache2
+service apache2 start
+service apache2 status
 ```
