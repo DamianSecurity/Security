@@ -1,4 +1,4 @@
-#Firewall w systemie Linux
+# Firewall w systemie Linux
 Testy przeprowadzane będą na 2 maszynach wirtualnych (ofiara i atakujący).
 
 ### Ofiara uruchamia usługi WWW oraz ssh. Atakujący może sprawdzić dostępność usług za pomocą:
